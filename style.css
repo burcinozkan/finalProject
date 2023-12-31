@@ -1,0 +1,283 @@
+
+/* Genel Gövde Stilleri */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #AAD7D9;
+    color: #333;
+    width: 80%;
+    line-height: 1.6;
+}
+
+/* Header Stili */
+.header {
+    background-color: #0056b3;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 4px solid #004080;
+}
+/* Search Bar ve Button Stilleri */
+.search-student {
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-end; /* Arama kısmını sağa hizala */
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px; /* İstediğiniz genişliğe göre ayarlayabilirsiniz */
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #86B6F6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #176B87;
+}
+
+/* Düğme Stilleri */
+button {
+    background-color: #86B6F6;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #176B87;
+}
+
+/* Form Alanları ve Etiketleri */
+input[type="text"], input[type="number"], select, button {
+    width: 50%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Form ve Bölüm Stilleri */
+.button-group, .add-student, .add-lecture{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+
+/* Düğme grubu ve form konteynerlarını içeren ana div'i düzenle */
+.main {
+    display: flex;
+    justify-content: space-between; /* İçerikleri eşit olarak dağıt */
+    margin-bottom: 20px;
+    margin-top: 0px;
+    background-color: #92C7CF;
+}
+
+/* Her bir form bölümü için sabit genişlik atama */
+
+
+/* Düğme grubunu düzenle */
+.button-group {
+    display: flex;
+    margin-bottom: 20px;
+   
+   
+}
+.button-and-search-container {
+    display: flex;
+   
+    align-items: center; /* İçerikleri dikeyde ortala */
+    margin-bottom: 20px; /* Altta boşluk bırak */
+}
+
+.button-group, .search-student {
+    flex: 1; /* Her iki bölüm de esnek genişlikte olsun */
+    margin: 0 10px; /* Sağ ve sol marjlar */
+}
+
+/* Düğmelerin genişliğini ayarla */
+.button-group button {
+    flex: 1; /* Butonlar arasında esnek boşluk bırak */
+    margin: 10px 10px; /* Butonlar arasında boşluk */
+    width: 100%;
+
+}
+
+/* Ortak sonuçlar alanını ayarla */
+#results-container {
+    clear: both; /* Üstteki floating elementlerden sonra temizle */
+    display: block; /* Blok seviye element olarak ayarla */
+}
+
+/* Flexbox Düzenlemeleri */
+.button-group, .main {
+    display: flex;
+    justify-content: space-between;
+   
+}
+.content-container {
+    width: 100%; /* İçeriği tam genişliğe ayarla */
+    margin-top: 20px; /* Üstten boşluk bırak */
+    
+}
+/* Ders Ekleme Formu Stilleri */
+#course-form {
+    width: 50%; /* Formun genel genişliğini azalt */
+    margin: auto; /* Formu ortala */
+    padding: 20px; /* İç dolgu ekle */
+    background-color: #fff; /* Arka plan rengini ayarla */
+    border-radius: 8px; /* Kenarları yuvarlaklaştır */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Gölgelendirme ekle */
+}
+
+#course-form input[type="text"], #course-form input[type="number"] {
+    width: 100%; /* Input genişliğini form genişliğine göre ayarla */
+    padding: 10px; /* Dolguyu ayarla */
+    margin-bottom: 10px; /* Alt marjı ayarla */
+    border: 1px solid #ccc; /* Kenarlık stilini belirle */
+    border-radius: 4px; /* Kenar yuvarlaklığı ekle */
+}
+
+#course-form label {
+    margin-bottom: 5px; /* Etiketler arası boşluğu ayarla */
+    font-size: 10px; /* Etiket yazı boyutunu ayarla */
+}
+
+.button-group, .main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+   
+}
+
+/* Düzenleme Formları */
+.add-student, .add-lecture {
+    flex: 1;  /* Her iki form da esnek konteynerin genişliğine göre ayarlanır */
+    margin: 10px 10px;  /* Sağ ve sol tarafta boşluk bırakır */
+    
+    background-color: #AAD7D9;  /* Arka plan rengi */
+    border-radius: 8px;  /* Kenarları yuvarlaklaştırır */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Gölgelendirme ekler */
+ 
+   
+   
+}
+.add-student, .add-lecture h3{
+    text-align: center;
+}
+/* Öğrenci Güncelleme Formu Stili */
+#update-student-section {
+    background-color: #92C7CF; /* Arka plan rengi beyaz olarak ayarlandı */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 10px; /* Sağ ve sol marj ayarı eklendi */
+}
+
+#update-student-section h3 {
+    text-align: center;
+}
+
+#update-student-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#update-student-form input[type="text"], 
+#update-student-form input[type="number"] {
+    width: 40%; /* Genişlik ayarı */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#update-student-form button {
+    width: 40%; /* Buton genişliği */
+    padding: 10px;
+    background-color: #86B6F6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#update-student-form button:hover {
+    background-color: #176B87;
+}
+
+
+
+
+#results-container table {
+    width: 33%; /* Tabloyu kapsayıcıya sığdır */
+    margin: auto; /* Tabloyu kapsayıcı içinde merkeze al */
+    border-collapse: collapse;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#results-container table,
+#results-container th,
+#results-container td {
+    border: 1px solid; /* Kenarlıkları kaldır */
+}
+
+#results-container{
+   height: fit-content;
+   background-color: #AAD7D9;
+    text-align: center;
+   
+}
+/* Remove Butonu Stilleri */
+#results-container table button {
+    background-color: #86B6F6; /* Kırmızımsı arka plan rengi */
+    color: white; /* Beyaz metin rengi */
+    border: none; /* Kenarlık kaldırılır */
+    padding: 5px 15px; /* Artırılmış yanal dolgu */
+    border-radius: 4px; /* Kenar yuvarlaklığı */
+    cursor: pointer; /* İmleç stilini işaretçi olarak değiştir */
+    transition: background-color 0.3s; /* Arka plan rengi geçiş efekti */
+    font-size: 12px; /* Küçültülmüş metin boyutu */
+    min-width: 70px; /* Minimum genişlik */
+    box-sizing: border-box; /* Genişlik ve yükseklik hesaplamalarında sınır ve dolguları dahil et */
+}
+
+#results-container table button:hover {
+    background-color: #176B87; /* Fare üzerine geldiğinde koyulaşan arka plan rengi */
+}

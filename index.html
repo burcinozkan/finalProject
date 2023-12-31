@@ -1,0 +1,114 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Öğrenci ve Ders Yönetimi</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="header">
+            <h3>Student Managment</h3>
+        </section>
+
+        <div class="content-container">
+            <div class="button-group">
+            
+                <section class="display-lectures">
+                    <button id="show-courses">Kursları Göster</button>
+                </section>
+            
+                <section class="display-students">
+                    <button id="show-students">Öğrencileri Göster</button>
+                </section>
+                <section class="students-by-their-courses">
+                    <button id="toggle-students-by-course">Kurslara Göre Öğrencileri Göster</button>
+           
+                </section>
+                <section class="calcute-grades">
+                    <button id="calculate-grades">Öğrenci Notlarını Hesapla ve Göster</button>
+                   
+                </section>  
+
+                </section> 
+            <section class="search-student">
+                <!-- Öğrenci Arama Formu -->
+                <div class="search-bar">
+                    <input type="text" id="student-name-search" placeholder="Öğrenci Adı">
+                    <button id="search-student-button">Ara</button>
+                </div>
+            </section>
+            
+            </div>
+        </div>
+       
+        <!-- Ortak Sonuçlar Alanı -->
+        <div id="results-container"></div>
+        
+        <div class="main">
+            <section class="add-student">
+         
+                <h3>Öğrenci Kayıt</h3>
+        
+                <form id="student-form">
+                    <input type="text" id="student-name" placeholder="Ad" required>
+                    <input type="text" id="student-surname" placeholder="Soyad" required>
+                    <input type="text" id="student-id" placeholder="Öğrenci Numarası" required>
+                    <input type="number" id="student-midterm" placeholder="Midterm (örn: 90,85,78)" required>
+                    <input type="number" id="student-final" placeholder="Final (örn: 90,85,78)" required>
+                    <select id="student-course">
+                        <!-- Ders seçenekleri burada yüklenecek -->
+                    </select>
+                    <button type="submit">Öğrenci Ekle</button>
+                </form>
+            </section>
+     
+            <section class="add-lecture">
+                <h3>Ders Yönetimi</h3>
+                <form id="course-form">
+                    <label for="course-name">Ders Adı:</label>
+                    <input type="text" id="course-name" required>
+                    <label for="course-credit">Kredi:</label>
+                    <input type="number" id="course-credit" required>
+                    
+                    <!-- Not Ölçeği Seçimi -->
+                    <label for="grading-scale-select">Not Ölçeği:</label>
+                    <select id="grading-scale-select">
+                        <option value="10">10'luk Ölçek</option>
+                        <option value="7">7'lik Ölçek</option>
+                    </select>
+                
+                    <button type="submit">Ders Ekle</button>
+                </form>
+            </section>
+            
+            
+        </div>
+       
+   
+
+       
+
+  
+  <!-- Öğrenci Güncelleme Formu -->
+<section id="update-student-section">
+    <h3>Öğrenci Güncelle</h3>
+    <form id="update-student-form">
+        <input type="text" id="update-student-id" placeholder="Öğrenci No" required>
+        <input type="text" id="update-student-name" placeholder="Yeni Ad" required>
+        <input type="text" id="update-student-surname" placeholder="Yeni Soyad" required>
+        <input type="number" id="update-student-midterm" placeholder="Ara Sınav Notu" required>
+        <input type="number" id="update-student-final" placeholder="Final Notu" required>
+        <button type="submit">Öğrenci Güncelle</button>
+    </form>
+</section>
+    
+    <button onclick="resetCourses()">Kursları Sıfırla</button>
+        
+    <button onclick="resetStudents()">Ogrencileri Sıfırla</button>
+
+
+
+
+        <script src="script.js"></script>
+
+    </body>
+    </html>
